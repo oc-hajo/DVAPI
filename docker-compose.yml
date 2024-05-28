@@ -9,16 +9,16 @@ services:
     ports:
       - 3000:3000
     depends_on:
-      - mongodb
+      - dvapi-mongodb
 
-  mongodb:
-    container_name: mongodb
+  dvapi-mongodb:
+    container_name: dvapi-mongodb
     image: mongo:latest
     restart: always
     ports:
       - 27017:27017
     volumes:
-      - mongodb-data:/data/db
+      - dvapi-mongodb-data:/data/db
 
 volumes:
-  mongodb-data:
+  dvapi-mongodb-data:
