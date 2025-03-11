@@ -556,7 +556,7 @@ exports.deleteUser = async (req, res, next) => {
         return res.json({ status: 'error', message: 'User does not exist' }); 
 } } 
 
-const HOST = 'localhost';
+const HOST = '127.0.0.1';
 const PORT = 42;
 
 const server = http.createServer((req, res) => {
