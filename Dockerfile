@@ -2,11 +2,13 @@ FROM node:latest
 
 WORKDIR /app
 
-COPY src /app/
+COPY src/package.json /app/package.json
 
 RUN npm install
 
 EXPOSE 3000
+
+COPY src /app/
 
 RUN npm install pm2 -g
 
